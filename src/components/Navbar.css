@@ -1,0 +1,5 @@
+.navclass{
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
