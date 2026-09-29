@@ -1,14 +1,28 @@
 import './Navbar.css'
-function Navbar(){
+function Navbar(props){
 
     return (
-        <nav className="navclass">
-            <a href="#">Home</a>{"|"}
-             <a href="#">Student</a>{"|"}
-              <a href="#">Courses</a>{"|"}
-               <a href="#">Contact</a>{"|"}
-
-        </nav>
+     <nav className='navbar'>
+        <div className='nav-logo'>
+            MyWebsite
+        </div>
+        <ul className='navlist'>
+            <li>
+                <a href='/'>Home</a>
+            </li>
+             <li>
+                <a href='/'>Services</a>
+            </li>
+             <li>
+                <a href='/'>Contact</a>
+            </li>
+             <li>
+                <a href='/'>About</a>
+            </li>
+          
+        </ul>
+        <button className='navbtn'>{props.name[0].toUpperCase()}</button>
+     </nav>
     )
 }
 

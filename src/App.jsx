@@ -15,8 +15,8 @@ function App() {
   return (
     <>
     
-  <Header/>
-  <Navbar/>
+
+  <Navbar name = "dhruv" />
   <StudentCard name="Amit" course = "cse" marks= {80} active="active" city="Mumbai"/>
   <StudentCard name="Dhruv" course = "it" marks= {90} active="active" city="Mumbai"/>
   <StudentCard name="omkar" course = "cse" marks= {80} active="active" city="Mumbai"/>
