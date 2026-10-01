@@ -6,9 +6,9 @@ import viteLogo from './assets/vite.svg'
 // import StudentCard from './StudentCard'
 // import './App.css'
 import Header from './components/Header'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import StudentCard from './components/StudentCars'
-import Footer  from './components/Footer'
+import Footer  from './components/Footer/Footer'
 function App() {
   
 
