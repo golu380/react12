@@ -38,7 +38,45 @@
     color: #38bdf8;
 }
 .navbtn{
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+    display: none;
+    background: none;
+    border: none;
+
+    color: white;
+     font-size: 28px; 
+ 
+    cursor: pointer; 
+    
+}
+
+@media (max-width: 770px){
+    .navbtn{
+        display: block;
+        background:none !important;
+      
+    }
+    .navlist{
+        display: none; 
+ 
+        position: absolute; 
+ 
+        top: 70px; 
+        left: 0; 
+ 
+        width: 100%; 
+ 
+        flex-direction: column; 
+ 
+        background-color: #1e293b; 
+ 
+        text-align: center; 
+ 
+        padding: 20px 0; 
+ 
+        gap: 20px;
+    }
+
+    .navlist.active{
+        display: flex;
+    }
 }

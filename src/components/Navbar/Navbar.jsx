@@ -1,12 +1,18 @@
 import './Navbar.css'
+import navicon  from "../../assets/image.png"
+import { useState } from 'react';
 function Navbar(props){
+
+    const [openMenu,setOpenMenu] = useState(false);
+    console.log(openMenu)
+    
 
     return (
      <nav className='navbar'>
         <div className='nav-logo'>
             MyWebsite
         </div>
-        <ul className='navlist'>
+        <ul className={`navlist ${openMenu? "active":""}`}>
             <li>
                 <a href='/'>Home</a>
             </li>
@@ -21,7 +27,11 @@ function Navbar(props){
             </li>
           
         </ul>
-        <button className='navbtn'>{props.name[0].toUpperCase()}</button>
+        <button className='navbtn' onClick={()=>{setOpenMenu(!openMenu)}} >
+            ___<br/>___<br/>___<br/>
+        
+          
+        </button>
      </nav>
     )
 }

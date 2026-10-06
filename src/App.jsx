@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -45,6 +45,10 @@ function App() {
 const handleChangeStatus = ()=>{
   setIsStudent(!isStudent)
 }
+
+useEffect(()=>{
+  console.log("hello from use effect")
+},[cnt])
   return (
     <>
     
