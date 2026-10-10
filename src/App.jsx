@@ -15,6 +15,7 @@ function App() {
   const [name,setName] = useState("")
   const [age,setAge] = useState(18)
   const [isStudent,setIsStudent] = useState(true)
+     const [seconds, setSeconds] = useState(0); 
 
   let count = 0;
   function increaseCount(){
@@ -47,8 +48,17 @@ const handleChangeStatus = ()=>{
 }
 
 useEffect(()=>{
-  console.log("hello from use effect")
+  console.log("hello from useeffect")
+  document.title = "my react app"
 },[cnt])
+// useEffect(()=>{
+//   console.log("hello from useeffect")
+//   document.title = "my react app"
+// },[])
+// useEffect(()=>{
+//   console.log("hello from useeffect")
+//   document.title = "my react app"
+// })
   return (
     <>
     
@@ -56,6 +66,7 @@ useEffect(()=>{
   <Navbar name = "dhruv" />
   <button onClick={increaseCount}> increase the count</button>
     <div>Count : {count}</div>
+    <div>second :{seconds}</div>
       <button onClick={increasecnt}> increase the count using use state</button>
  
           <button onClick={decreasecnt}> decrease the count using use state</button>
