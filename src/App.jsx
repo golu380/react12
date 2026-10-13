@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState,useRef } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -16,6 +16,10 @@ function App() {
   const [age,setAge] = useState(18)
   const [isStudent,setIsStudent] = useState(true)
      const [seconds, setSeconds] = useState(0); 
+const inputRef = useRef(null)
+ function focusInput() { 
+    inputRef.current.focus(); 
+  } 
 
   let count = 0;
   function increaseCount(){
@@ -46,19 +50,31 @@ function App() {
 const handleChangeStatus = ()=>{
   setIsStudent(!isStudent)
 }
-
-useEffect(()=>{
-  console.log("hello from useeffect")
-  document.title = "my react app"
-},[cnt])
+console.log(seconds)
 // useEffect(()=>{
-//   console.log("hello from useeffect")
-//   document.title = "my react app"
+//   console.log("Effect excecuted")
 // },[])
+
 // useEffect(()=>{
-//   console.log("hello from useeffect")
-//   document.title = "my react app"
+//   console.log("Effect excecuted")
+// },[cnt])
+
+// useEffect(()=>{
+//   console.log("Effect excecuted")
 // })
+
+  // useEffect(() => { 
+ 
+  //   const timer = setInterval(() => { 
+  //     setSeconds((previous) => previous + 1); 
+  //   }, 1000); 
+ 
+  //   return () => { 
+  //     clearInterval(timer); 
+  //   }; 
+ 
+  // }, []); 
+
   return (
     <>
     
@@ -84,6 +100,19 @@ useEffect(()=>{
   <StudentCard name="Dhruv" course = "it" marks= {90} active="active" city="Mumbai"/>
   <StudentCard name="omkar" course = "cse" marks= {80} active="active" city="Mumbai"/>
   <StudentCard name="priya" course = "cse" marks= {85} active="active" city="Mumbai"/>
+
+  <div> 
+ 
+      <input 
+        ref={inputRef} 
+        type="text" 
+      /> 
+ 
+      <button onClick={focusInput}> 
+        Focus Input 
+      </button> 
+ 
+    </div>
     
   <Footer/>
      
