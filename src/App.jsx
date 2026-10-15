@@ -9,6 +9,7 @@ import Header from './components/Header'
 import Navbar from './components/Navbar/Navbar'
 import StudentCard from './components/StudentCars'
 import Footer  from './components/Footer/Footer'
+import UseMemoDemo from './components/UseMemoDemo'
 function App() {
 
   const  [cnt , setCnt] = useState(0)
@@ -95,6 +96,7 @@ console.log(seconds)
     <button onClick={handleChangeStatus}>change status of student</button>
 
     {isStudent ? (<h1>student hai</h1>):(<h1>pta nhi</h1>)}
+    <UseMemoDemo />
 
   <StudentCard name="Amit" course = "cse" marks= {80} active="active" city="Mumbai"/>
   <StudentCard name="Dhruv" course = "it" marks= {90} active="active" city="Mumbai"/>
