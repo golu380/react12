@@ -10,8 +10,11 @@ import Navbar from './components/Navbar/Navbar'
 import StudentCard from './components/StudentCars'
 import Footer  from './components/Footer/Footer'
 import UseMemoDemo from './components/UseMemoDemo'
+import Button from './components/Button/Button'
 function App() {
-
+const handlesave= ()=>{
+alert("hello from save button")
+}
   const  [cnt , setCnt] = useState(0)
   const [name,setName] = useState("")
   const [age,setAge] = useState(18)
@@ -102,6 +105,15 @@ console.log(seconds)
   <StudentCard name="Dhruv" course = "it" marks= {90} active="active" city="Mumbai"/>
   <StudentCard name="omkar" course = "cse" marks= {80} active="active" city="Mumbai"/>
   <StudentCard name="priya" course = "cse" marks= {85} active="active" city="Mumbai"/>
+  <Button type="primary" onclick={handlesave}>
+    Save
+  </Button>
+  <Button type="danger">
+    Delete
+  </Button>
+  <Button type= "secondary">
+    Cancel
+  </Button>
 
   <div> 
  
@@ -110,7 +122,7 @@ console.log(seconds)
         type="text" 
       /> 
  
-      <button onClick={focusInput}> 
+      <button onClick={focusInput} > 
         Focus Input 
       </button> 
  
