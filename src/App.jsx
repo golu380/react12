@@ -11,6 +11,9 @@ import StudentCard from './components/StudentCars'
 import Footer  from './components/Footer/Footer'
 import UseMemoDemo from './components/UseMemoDemo'
 import Button from './components/Button/Button'
+import UserProvider from './components/UserProvider'
+import WelcomePage from './components/WelcomePage'
+import Dashboard from './components/Dashboard'
 function App() {
 const handlesave= ()=>{
 alert("hello from save button")
@@ -81,9 +84,13 @@ console.log(seconds)
 
   return (
     <>
+    <UserProvider>
+      <WelcomePage/>
+      <Dashboard/>
+    </UserProvider>
     
 
-  <Navbar name = "dhruv" />
+  {/* <Navbar name = "dhruv" />
   <button onClick={increaseCount}> increase the count</button>
     <div>Count : {count}</div>
     <div>second :{seconds}</div>
@@ -101,6 +108,8 @@ console.log(seconds)
     {isStudent ? (<h1>student hai</h1>):(<h1>pta nhi</h1>)}
     <UseMemoDemo />
 
+
+
   <StudentCard name="Amit" course = "cse" marks= {80} active="active" city="Mumbai"/>
   <StudentCard name="Dhruv" course = "it" marks= {90} active="active" city="Mumbai"/>
   <StudentCard name="omkar" course = "cse" marks= {80} active="active" city="Mumbai"/>
@@ -115,7 +124,11 @@ console.log(seconds)
     Cancel
   </Button>
 
-  <div> 
+  
+   */}
+  
+
+  {/* <div> 
  
       <input 
         ref={inputRef} 
@@ -129,7 +142,7 @@ console.log(seconds)
     </div>
     
   <Footer/>
-     
+      */}
     </>
   )
 }
