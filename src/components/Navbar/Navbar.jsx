@@ -1,6 +1,7 @@
 import './Navbar.css'
 import navicon  from "../../assets/image.png"
 import { useState } from 'react';
+import { Link ,NavLink} from 'react-router-dom';
 function Navbar(props){
 
     const [openMenu,setOpenMenu] = useState(false);
@@ -14,16 +15,16 @@ function Navbar(props){
         </div>
         <ul className={`navlist ${openMenu? "active":""}`}>
             <li>
-                <a href='/'>Home</a>
+                <NavLink to="/">Home </NavLink>
             </li>
              <li>
-                <a href='/'>Services</a>
+                 <NavLink to="/services">Services </NavLink>
             </li>
              <li>
-                <a href='/'>Contact</a>
+                 <NavLink to="/aboutus">About us </NavLink>
             </li>
              <li>
-                <a href='/'>About</a>
+                <NavLink to = "/contactus">Contact us</NavLink>
             </li>
           
         </ul>

@@ -14,6 +14,10 @@ import Button from './components/Button/Button'
 import UserProvider from './components/UserProvider'
 import WelcomePage from './components/WelcomePage'
 import Dashboard from './components/Dashboard'
+import { Route, Routes } from 'react-router-dom'
+import Aboutus from './components/Aboutus'
+import Services from './components/Services'
+import Contactus from './components/Contactus'
 function App() {
 const handlesave= ()=>{
 alert("hello from save button")
@@ -84,13 +88,18 @@ console.log(seconds)
 
   return (
     <>
-    <UserProvider>
-      <WelcomePage/>
-      <Dashboard/>
-    </UserProvider>
+  
     
 
-  {/* <Navbar name = "dhruv" />
+   <Navbar name = "dhruv" />
+
+   <hr/>
+
+   <Routes>
+    <Route path='/aboutus' element={<Aboutus/>}/>
+    <Route path='/contactus' element={<Contactus/>}/>
+    <Route path='/services' element={<Services/>}/>
+   </Routes>
   <button onClick={increaseCount}> increase the count</button>
     <div>Count : {count}</div>
     <div>second :{seconds}</div>
@@ -104,12 +113,16 @@ console.log(seconds)
     <div>{name}</div>
 
     <button onClick={handleChangeStatus}>change status of student</button>
+     
 
     {isStudent ? (<h1>student hai</h1>):(<h1>pta nhi</h1>)}
     <UseMemoDemo />
 
 
-
+ <UserProvider>
+      <WelcomePage/>
+      <Dashboard/>
+    </UserProvider>
   <StudentCard name="Amit" course = "cse" marks= {80} active="active" city="Mumbai"/>
   <StudentCard name="Dhruv" course = "it" marks= {90} active="active" city="Mumbai"/>
   <StudentCard name="omkar" course = "cse" marks= {80} active="active" city="Mumbai"/>
@@ -125,10 +138,9 @@ console.log(seconds)
   </Button>
 
   
-   */}
-  
+   
 
-  {/* <div> 
+  <div> 
  
       <input 
         ref={inputRef} 
@@ -142,7 +154,7 @@ console.log(seconds)
     </div>
     
   <Footer/>
-      */}
+      
     </>
   )
 }
