@@ -14,14 +14,30 @@ import Button from './components/Button/Button'
 import UserProvider from './components/UserProvider'
 import WelcomePage from './components/WelcomePage'
 import Dashboard from './components/Dashboard'
-import { Route, Routes } from 'react-router-dom'
+import Dashboard1 from './components/Dashboard1'
+import { Route, Routes,useNavigate } from 'react-router-dom'
 import Aboutus from './components/Aboutus'
 import Services from './components/Services'
 import Contactus from './components/Contactus'
+
 function App() {
+  
 const handlesave= ()=>{
 alert("hello from save button")
+
 }
+
+const handleNavigate = () =>{
+  navigate('/dashborad')
+  
+}
+
+
+const handleNavigate1 = () =>{
+  navigate(-1)
+  
+}
+const navigate = useNavigate();
   const  [cnt , setCnt] = useState(0)
   const [name,setName] = useState("")
   const [age,setAge] = useState(18)
@@ -61,6 +77,7 @@ const inputRef = useRef(null)
 const handleChangeStatus = ()=>{
   setIsStudent(!isStudent)
 }
+
 console.log(seconds)
 // useEffect(()=>{
 //   console.log("Effect excecuted")
@@ -99,6 +116,7 @@ console.log(seconds)
     <Route path='/aboutus' element={<Aboutus/>}/>
     <Route path='/contactus' element={<Contactus/>}/>
     <Route path='/services' element={<Services/>}/>
+    <Route path='/dashborad' element={<Dashboard1/>} />
    </Routes>
   <button onClick={increaseCount}> increase the count</button>
     <div>Count : {count}</div>
@@ -130,10 +148,10 @@ console.log(seconds)
   <Button type="primary" onclick={handlesave}>
     Save
   </Button>
-  <Button type="danger">
+  <Button type="danger" onclick={handleNavigate}>
     Delete
   </Button>
-  <Button type= "secondary">
+  <Button type= "secondary" onclick={handleNavigate1}>
     Cancel
   </Button>
 
